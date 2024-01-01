@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<img src="bike.png" width="60px">
+<div class="progress">
+    <div class="inner"></div>
+</div>
+<style>
+    .progress{
+        background-color: white;
+        width: 20rem;
+        height: 0.25rem;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .progress .inner{
+        background-color: #f7b702;
+        height: 100%;
+        transform-origin: left;
+        animation: progress 5s 1;
+    }
+    @keyframes bike {
+        0%{ margin-left: -260px; rotate: 0deg; }
+        30%{ rotate: -22deg;}
+        100%{ margin-left: 340px; rotate: 90deg; }
+    }
+    @keyframes progress {
+    from{ transform: scaleX(5%) translateX(-5%); } }
+    body{
+        display: grid;
+        place-items: center;
+        height: 95vh;
+        background-color: rgb(17, 17, 17);
+    }
+    img{
+        position: fixed;
+        margin-top: -60px;
+        rotate: 90deg;
+        margin-left: 340px;
+        animation: bike 5s 1;
+    }
+</style>
+</body>
+</html>
